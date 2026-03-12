@@ -90,12 +90,23 @@
     </v-container>
     <!--Contact Us-->
     <v-container style="background-color:beige" max-width="100%" >
-        <v-row class="text center">
+        <v-row class="text-center">
          <div class="text-body-large font-weight-light text-emphasis mb-8">Get in Touch</div>
+         </v-row>
+         <v-row>
          <div class="text-body-large font-weight-light text-emphasis mb-8">+254 76 9889 9880 | @macfitgmail.com</div>
+
+         </v-row>
+         <v-row>
          <div class="text-body-large font-weight-light text-emphasis mb-8">Opening Hours</div> 
+         </v-row>
+         <v-row>
          <div class="text-body-large font-weight-light text-emphasis mb-8">Mon-Fri: 5.00am - 9.00am | Sat: 5.30am - 6pm| Sun: 9.00am - 4.00pm</div>
-         <div class="text-body-large font-weight-light text-emphasis mb-8">MacFitGym, 3RD Floor, Imara Mall, Nairobi</div>  
+         </v-row>
+         <v-row>
+         <div class="text-body-large font-weight-light text-emphasis mb-8">MacFitGym, 3RD Floor, Imara Mall, Nairobi</div> 
+         </v-row>
+         <v-row> 
          <div class="text-body-large font-weight-light text-emphasis mb-8">&copy; 2025 MacFit Gym. Designed by Rutto Alpha</div>
         </v-row>
     </v-container>

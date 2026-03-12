@@ -42,7 +42,7 @@ const router = createRouter({
       component: Bundles,
     },
     {
-      path: '/gymlocations',
+      path: '/gym_locations',
       name: 'gymlocations',
       component: GymLocations,
     },

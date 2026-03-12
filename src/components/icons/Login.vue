@@ -1,5 +1,8 @@
 <script setup>  
   import { ref } from 'vue'
+  import { useRouter } from 'vue-router'
+
+  const router = useRouter();
 
   const rules = {
     required: value => !!value || 'Required.',
@@ -10,6 +13,16 @@
   const show1 = ref(false)
   const show2 = ref(true)
   const password = ref(null)
+  const username = ref(null)
+
+  function login(){
+    const userDetails = JSON.parse(localStorage.getItem('userDetails'))
+    if (username.value == userDetails.email && password.value == userDetails.password){
+    //proceed to home page
+      router.push('/homepage')
+      localStorage.setItem("isLoggedIn", true);
+    }else{ console.log('Invalid credentials. Try again')}
+  }
 </script>
 <template>  
     <v-container style="background-color:beige" width="50%" class="text-center mt-12">
@@ -30,7 +43,7 @@
                   </v-row>
                   <v-row>
                     <v-col md="6"><div class="text-title-large font-weight-medium text-right">Username</div></v-col>
-                    <v-col md="6"><v-text-field variant="outlined"></v-text-field></v-col>
+                    <v-col md="6"><v-text-field variant="outlined" v-model="username"></v-text-field></v-col>
                   </v-row>
                     <v-row>
                     <v-col md=""><div class="text-title-large font-weight-medium text-right">Password</div></v-col>
@@ -44,11 +57,12 @@
                     </v-text-field></v-col>
                   </v-row>
                   <v-col md="12">
-                    <v-btn color="#000035" variant="elevated">Log in</v-btn>
+                    <v-btn color="#000035" variant="elevated" @click="login">Log in</v-btn>
                   </v-col>
                   <v-row>
                     <v-col md="12">
-                        <div>New MacFit Gym? Create an account</div>
+                        <div>New MacFit Gym?
+                          <router-link to="/signup">Create an account</router-link> </div>
                     </v-col>
                   </v-row>
                 </v-form>
