@@ -1,5 +1,5 @@
 <script setup>  
-    const userDetails = JSON.parse(localStorage.getItem('userDetails'))
+    const userDetails = JSON.parse(localStorage.getItem('user'))
 </script>
 <template>  
     <v-container width="50%" style="background-color:beige" class="mt-12">

@@ -30,7 +30,7 @@ const vuetify = createVuetify({
       light: {
         colors: {
           primary: "#000035",
-          secondary: "beige"        
+          secondary: "beige",        
         }
       },
     },
